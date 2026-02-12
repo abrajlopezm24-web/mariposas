@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🦋 Para Ric 🦋</title>
+        <style>
+            :root {
+                --orange: #ff8c00;
+                --black: #2d2d2d;
+                --cream: #fffaf0;
+            }
+            body {
+                background-color: var(--cream);
+                font-family: 'Georgia', serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                overflow: hidden;
+                color: var(--black);
+            }
+            .card {
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                max-width: 400px;
+                width: 90%;
+                text-align: center;
+                z-index: 10;
+                border: 1px solid #eee;
+                position: relative;
+            }
+            h2 {
+                color: var(--orange);
+                margin-bottom: 1rem;
+            }
+            p {
+                line-height: 1.6;
+                font-size: 1.1rem;
+                text-align: left;
+            }
+            .butterfly-emoji {
+                font-size: 2rem;
+                display: block;
+                margin-bottom: 10px;
+            }
+            /*Animación de mariposas*/
+            .butterfly {
+                position: absolute;
+                top: -50px;
+                font-size: 1.5rem;
+                user-select: none;
+                pointer-events: none;
+                z-index: 1;
+                animation: fall linear forwards;
+            }
+            @keyframes fall {
+                from {
+                    transform: translateY(0) translateX(0) rotate(0deg)
+                }
+                to {
+                    transform: translateY(110vh) translateX(50px) rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <span class="butterfly-emoji">🦋</span>
+            <h2>¿Sabías qué...?</h2>
+            <p>
+                La mariposa monarca viaja miles de kilómetros, enfrentando tormentas, depredadores y vientos en contra, todo para encontrar un donde estar a salvo. Es un viaje de resistencia pura; una lucha intensa y dramática donde algo tan frágil y bello demuestra, por mérito propio, ser uno de los seres con más bravío, resiliencia y fuerza... Para completar un ciclo, terminar una etapa de su vida.
+            </p>
+            <p>
+                Cuando te veo, Ricmarys, no puedo evitar pensar en ellas por alguna razón, más allá de la admiración que te tengo y la belleza (que es lo obvio). 
+            </p>
+            <p>
+                Sé que has enfrentado <b>luchas silenciosas</b>, no puedo evitar pensar que has viajado mucho y que el camino, aunque agotador, no pudo ni podrá contigo. Contra todo es evidente tu gran fuerza.</p>
+            <p>
+                Así como la monarca que con certeza llega siempre a su destino, encuentres también tu refugio en el amor que te tengo yo y a los que más importas.
+            </p>
+            <p>
+                ...
+            </p>
+            <p>
+                ¿Sabías también que actualmente en existen 12.000+ de estas mariposas en el mundo?
+            </p>
+            <p>¿Y sabías también que tú eres mi favorita 😊?</p>
+
+            <p style="text-align: center; font-weight: bold; margin-top: 20px;">¡Felíz día de San Valentín!</p>
+        </div>
+        <script>
+            function createButterfly(){
+                const butterfly = document.createElement('div');
+                butterfly.classList.add('butterfly');
+                butterfly.innerHTML = '🦋';
+                butterfly.style.left = Math.random() * 100 + 'vw';
+                butterfly.style.animationDuration = Math.random() * 3 + 2 + 's';
+                butterfly.style.opacity = Math.random();
+                butterfly.style.fontSize = Math.random() * 15 + 15 + 'px';
+
+                document.body.appendChild(butterfly);
+
+                setTimeout(() => {
+                    butterfly.remove();
+                }, 5000);
+            }
+            //Creación continua de mariposas
+            setInterval(createButterfly, 300);
+        </script>
+    </body>
+</html>
