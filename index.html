@@ -54,7 +54,7 @@
             /*Animación de mariposas*/
             .butterfly {
                 position: absolute;
-                top: -50px;
+                top: 0;
                 font-size: 1.5rem;
                 user-select: none;
                 pointer-events: none;
@@ -63,10 +63,10 @@
             }
             @keyframes fall {
                 from {
-                    transform: translateY(0) translateX(0) rotate(0deg)
+                    transform: translateY(-10vh) translateX(0) rotate(0deg)
                 }
                 to {
-                    transform: translateY(110vh) translateX(50px) rotate(360deg);
+                    transform: translateY(calc(110vh+60px)) translateX(50px) rotate(360deg);
                 }
             }
         </style>
@@ -119,6 +119,7 @@
     </body>
 
 </html>
+
 
 
 
