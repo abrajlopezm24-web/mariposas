@@ -18,29 +18,33 @@
                 align-items: center;
                 min-height: 100vh;
                 margin: 0;
-                overflow: hidden;
+                overflow-x: hidden;
                 color: var(--black);
+                padding: 20px;
+                box-sizing: border-box;
             }
             .card {
                 background: white;
-                padding: 2rem;
+                padding: 1.5rem;
                 border-radius: 15px;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                width: 100%;
                 max-width: 400px;
-                width: 90%;
                 text-align: center;
                 z-index: 10;
                 border: 1px solid #eee;
                 position: relative;
+                box-sizing: border-box;
             }
             h2 {
                 color: var(--orange);
                 margin-bottom: 1rem;
             }
             p {
-                line-height: 1.6;
-                font-size: 1.1rem;
+                line-height: 1.5;
+                font-size: 1rem;
                 text-align: left;
+                word-wrap: break-word;
             }
             .butterfly-emoji {
                 font-size: 2rem;
@@ -112,4 +116,5 @@
             setInterval(createButterfly, 300);
         </script>
     </body>
+
 </html>
